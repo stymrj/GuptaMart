@@ -11,7 +11,7 @@ const { CartRouter } = require('./routes/CartRouter')
 
 mongoose.connect(process.env.MONGO_URI)
 .then(()=>{
-    console.log('Database Connected Succesfully!')
+    console.log('Database Connected Succesfully!!')
 
     app.listen(process.env.PORT, ()=>{
     console.log(`Server is running at port : ${process.env.PORT}`)
