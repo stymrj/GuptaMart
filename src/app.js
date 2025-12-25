@@ -6,6 +6,7 @@ const cp = require('cookie-parser')
 
 const { productRouter } = require('./routes/productRouter')
 const { userRouter } = require('./routes/userRouter')
+const { CartRouter } = require('./routes/CartRouter')
 
 
 mongoose.connect(process.env.MONGO_URI)
@@ -25,3 +26,4 @@ app.use(cp())
 app.use(express.json())
 app.use('/api', userRouter)
 app.use('/api', productRouter)
+app.use('/api',CartRouter)
